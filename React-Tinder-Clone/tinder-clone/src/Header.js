@@ -13,18 +13,20 @@ function Header({ backButton }) {
         <div className="header">
             {backButton ? (
                 <IconButton onClick={() => history.replace(backButton)}>
-                    <ArrowBackIcon fontSize="large" className="header__icon"/>
+                    <ArrowBackIcon fontSize="large" className="header__icon" />
                 </IconButton>
-                
-            ): (
-                <IconButton>
-                    <PersonIcon className="header__icon" fontSize="large" />
-                </IconButton>
-            )}
- 
+
+            ) : (
+                    <Link to="/profile">
+                        <IconButton>
+                            <PersonIcon className="header__icon" fontSize="large" />
+                        </IconButton>
+                    </Link>
+                )}
+
             <Link to="/">
-            <img className="header__log" src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png"
-                alt="tinder logo"></img>
+                <img className="header__log" src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png"
+                    alt="tinder logo"></img>
             </Link>
             <Link to="/chat">
                 <IconButton>

@@ -5,6 +5,8 @@ import TinderCards from "./TinderCards"
 import SwipeButtons from "./SwipeButtons"
 import Chats from "./Chats"
 import ChatScreen from "./ChatScreen"
+import Profile from "./Profile"
+import { Login } from "./components/login/Index"
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,17 +28,20 @@ function App() {
             <Header backButton="/" />
             <Chats />
           </Route>
+          <Route path="/profile">
+            <Header backButton="/" />
+            <Profile />
+          </Route>
+          <Route path="/login">
+            <Header backButton="/" />
+            <Login />
+          </Route>
           <Route path="/">{/* Default route has always writed in the bottom of the route. */}
             <Header />
             <TinderCards />
             <SwipeButtons />
           </Route>
         </Switch>
-        {/* Tinder Cards */}
-        {/* Buuttons below tinder cards */}
-
-        {/** Chats screen */}
-        {/** Individual chat screen  */}
       </Router>
     </div>
   );
